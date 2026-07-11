@@ -1,0 +1,29 @@
+CARDTROPOLIS TCG — BRAND ASSETS
+================================
+
+COLORS
+  Cardtropolis Blue   #0033a0   rgb(0, 51, 160)     logo fill, hero, headings
+  Night               #001440   rgb(0, 20, 64)      deep gradient / dark navy
+  Signal Red          #da0e1c   rgb(218, 14, 28)    CTAs, accents, wordmark
+  Skyline Yellow      #ffce33   rgb(255, 206, 51)   skyline, borders, highlights
+  Ink                 #131b30   rgb(19, 27, 48)     outlines, body text
+  Gray                #5a6378   rgb(90, 99, 120)    secondary text
+  Paper               #fdfaf2   rgb(253, 250, 242)  page background
+  White               #ffffff   rgb(255, 255, 255)
+
+FONTS  (Google Fonts)
+  Bangers        display / headlines
+  Nunito         body text (400 / 700 / 800)
+  Comic Neue     captions / logo text
+
+LOGO BADGE (recipe)
+  Circle: fill #0033a0, stroke #ffce33 width ~5 (on a 260 box)
+  Contents: skyline.svg (recolor to #ffce33) grounded near the bottom,
+            a few 4-point stars up top. Wordmark optional.
+
+FILES
+  logo.svg / logo.png   current site logo (skyline badge)
+  wordmark.png          hand-lettered "CARDTROPOLIS TCG" (transparent)
+  skyline.svg           the city skyline art (yellow outlines + windows)
+  design-city-badge.svg full round emblem (wordmark + skyline + stars)
+  design-skyline-banner.svg  wordmark over skyline banner

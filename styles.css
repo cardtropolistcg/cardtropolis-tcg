@@ -63,7 +63,7 @@ header {
   display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
 }
 .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-.logo-img { width: 48px; height: 48px; border-radius: 50%; border: 2px solid var(--ink); }
+.logo-img { width: 48px; height: 48px; border-radius: 50%; }
 .logo-text {
   font-family: 'Comic Sans MS', 'Comic Sans', 'Comic Neue', cursive;
   font-size: 1.22rem; font-weight: 700;
@@ -321,7 +321,7 @@ footer {
 .footer-col p { margin-bottom: 10px; }
 .footer-col a { color: #dbe4fb; text-decoration: none; }
 .footer-col a:hover { color: var(--white); text-decoration: underline; }
-.foot-logo { width: 56px; height: 56px; border-radius: 50%; margin-bottom: 12px; border: 2px solid var(--yellow); }
+.foot-logo { width: 56px; height: 56px; border-radius: 50%; margin-bottom: 12px; }
 .footer-brand .foot-tag { max-width: 220px; }
 .foot-bottom {
   border-top: 1px solid rgba(255,255,255,0.15); padding-top: 20px;
@@ -381,5 +381,7 @@ img { max-width: 100%; }
   .footer-brand .foot-tag { margin: 0 auto; }
   .foot-logo { margin: 0 auto 12px; display: block; }
   .gallery figure, .photo-card, .stat { transform: none !important; }
+  .stats { flex-direction: column; align-items: center; }
+  .stat { width: 100%; max-width: 340px; box-sizing: border-box; }
   .contact-line { flex-direction: column; gap: 2px; }
 }

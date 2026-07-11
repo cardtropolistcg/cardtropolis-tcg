@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardtropolis TCG — Back Soon</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <meta name="theme-color" content="#0033a0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      background:
+        radial-gradient(1.6px 1.6px at 15% 20%, #fff 60%, transparent),
+        radial-gradient(1.4px 1.4px at 70% 15%, #fff 60%, transparent),
+        radial-gradient(1.5px 1.5px at 85% 42%, #fff 60%, transparent),
+        radial-gradient(1.3px 1.3px at 28% 62%, #fff 60%, transparent),
+        radial-gradient(1.5px 1.5px at 55% 30%, #fff 60%, transparent),
+        radial-gradient(1.4px 1.4px at 40% 12%, #fff 60%, transparent),
+        linear-gradient(180deg, var(--night) 0%, var(--blue) 100%);
+      background-attachment: fixed;
+    }
+    .maint { text-align: center; color: #fff; max-width: 580px; padding: 44px 24px; }
+    .maint .badge { width: 128px; height: 128px; border-radius: 50%; margin: 0 auto 22px; display: block; }
+    .maint h1 { color: var(--yellow); font-size: clamp(2.2rem, 6vw, 3.4rem); text-shadow: 2px 2px 0 rgba(0,0,0,.4); }
+    .maint .sub { color: #dbe4fb; font-size: 1.06rem; margin: 14px auto 0; max-width: 460px; }
+    .maint .links { margin-top: 24px; }
+    .gate { margin-top: 36px; background: rgba(255,255,255,.06); border: 2px solid rgba(255,255,255,.16); border-radius: 12px; padding: 20px; }
+    .gate label { display: block; font-size: .76rem; text-transform: uppercase; letter-spacing: .13em; color: var(--yellow); font-weight: 800; margin-bottom: 12px; }
+    .gate .row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .gate input { padding: 12px 14px; border: 2px solid var(--ink); border-radius: 8px; font-family: 'Nunito', sans-serif; font-size: .95rem; min-width: 210px; box-shadow: 3px 3px 0 rgba(0,0,0,.25); }
+    .gate .err { color: #ffb4b4; font-size: .85rem; margin-top: 12px; min-height: 1.1em; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <main class="maint">
+    <img class="badge" src="assets/logo.png" alt="Cardtropolis TCG logo">
+    <h1>We'll Be Right Back</h1>
+    <p class="sub">Our site is getting a quick tune-up. The shop is still open — come see us in Silverdale, or find us online in the meantime.</p>
+    <div class="links">
+      <a class="btn btn-primary" href="https://cardtropolistcg.tcgplayerpro.com/" target="_blank" rel="noopener">Shop Online</a>
+      <a class="btn btn-secondary" href="https://www.facebook.com/cardtropolistcg" target="_blank" rel="noopener">Facebook</a>
+    </div>
+    <div class="gate">
+      <label for="pw">Team / Preview Access</label>
+      <div class="row">
+        <input id="pw" type="password" placeholder="Enter password" autocomplete="off" aria-label="Preview access password">
+        <button class="btn btn-blue" id="go" type="button">Enter</button>
+      </div>
+      <div class="err" id="err" role="alert"></div>
+    </div>
+  </main>
+  <script>
+    (function () {
+      // Middleware bounces a wrong password back here with ?e=1
+      if (new URLSearchParams(location.search).get('e') === '1') {
+        document.getElementById('err').textContent = 'Incorrect password — try again.';
+      }
+      function unlock() {
+        var v = document.getElementById('pw').value;
+        // Send to the server; Vercel Edge Middleware validates it and sets the unlock cookie.
+        location.href = '/?pw=' + encodeURIComponent(v);
+      }
+      document.getElementById('go').addEventListener('click', unlock);
+      document.getElementById('pw').addEventListener('keydown', function (e) { if (e.key === 'Enter') unlock(); });
+    })();
+  </script>
+</body>
+</html>
