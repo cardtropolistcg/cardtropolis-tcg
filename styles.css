@@ -96,6 +96,19 @@ nav a.shop-btn {
 }
 nav a.shop-btn:hover { transform: translate(1px, 1px); box-shadow: 2px 2px 0 var(--ink); }
 
+/* Social icons in the nav */
+.social-nav { display: flex; align-items: center; gap: 8px; }
+.social-ico {
+  width: 36px; height: 36px; border-radius: 50%; padding: 0; flex: 0 0 auto;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 2px solid var(--ink); box-shadow: 2px 2px 0 var(--ink);
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+.social-ico:hover { transform: translate(1px, 1px); box-shadow: 1px 1px 0 var(--ink); }
+.social-ico svg { width: 19px; height: 19px; fill: #fff; display: block; }
+.social-ico.fb { background: #1877F2; }
+.social-ico.dc { background: #5865F2; }
+
 /* Hero — night sky like the badge */
 .hero {
   position: relative; overflow: hidden;
@@ -157,6 +170,7 @@ nav a.shop-btn:hover { transform: translate(1px, 1px); box-shadow: 2px 2px 0 var
 .btn-primary { background: var(--red); color: var(--white); }
 .btn-blue { background: var(--blue); color: var(--white); }
 .btn-secondary { background: var(--white); color: var(--ink); }
+.btn-discord { background: #5865F2; color: var(--white); }
 .btn-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
 /* Sections */
@@ -348,6 +362,7 @@ img { max-width: 100%; }
   nav a { display: block; padding: 12px 8px; border-bottom: none; font-size: 1rem; }
   nav a.active { background: rgba(0,51,160,0.06); border-bottom: none; }
   nav a.shop-btn { margin: 10px auto 4px; max-width: 240px; }
+  .social-nav { justify-content: center; padding: 12px 8px; }
 
   section { padding: 44px 0; }
   .section-head h2 { font-size: 1.9rem; }
@@ -369,19 +384,4 @@ img { max-width: 100%; }
   .day-card, .card, .event-row { padding: 18px 20px; }
 }
 
-@media (max-width: 600px) {
-  .logo-img { width: 40px; height: 40px; }
-  .logo-text { font-size: 1.05rem; }
-  .hero .wordmark { max-width: 88vw; }
-  .hero h1 { font-size: 1.35rem; }
-  .page-hero h1 { font-size: 2rem; }
-  .btn-row { flex-direction: column; align-items: center; }
-  .btn-row .btn { width: 100%; max-width: 280px; text-align: center; }
-  .footer-grid { text-align: center; gap: 24px; }
-  .footer-brand .foot-tag { margin: 0 auto; }
-  .foot-logo { margin: 0 auto 12px; display: block; }
-  .gallery figure, .photo-card, .stat { transform: none !important; }
-  .stats { flex-direction: column; align-items: center; }
-  .stat { width: 100%; max-width: 340px; box-sizing: border-box; }
-  .contact-line { flex-direction: column; gap: 2px; }
-}
+@media (max-width:

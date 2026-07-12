@@ -43,6 +43,7 @@
     <div class="links">
       <a class="btn btn-primary" href="https://cardtropolistcg.tcgplayerpro.com/" target="_blank" rel="noopener">Shop Online</a>
       <a class="btn btn-secondary" href="https://www.facebook.com/cardtropolistcg" target="_blank" rel="noopener">Facebook</a>
+      <a class="btn btn-discord" href="https://discord.gg/FfGNFpCng9" target="_blank" rel="noopener">Discord</a>
     </div>
     <div class="gate">
       <label for="pw">Team / Preview Access</label>
@@ -65,8 +66,4 @@
         location.href = '/?pw=' + encodeURIComponent(v);
       }
       document.getElementById('go').addEventListener('click', unlock);
-      document.getElementById('pw').addEventListener('keydown', function (e) { if (e.key === 'Enter') unlock(); });
-    })();
-  </script>
-</body>
-</html>
+      document.getElementById('pw').addEv
