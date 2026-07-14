@@ -35,4 +35,11 @@
 
   var mount = document.getElementById('site-header');
   if (mount) { mount.outerHTML = html; }
+
+  // Vercel Web Analytics — starts collecting once Web Analytics is enabled on the Vercel project.
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  var _vi = document.createElement('script');
+  _vi.defer = true;
+  _vi.src = '/_vercel/insights/script.js';
+  document.head.appendChild(_vi);
 })();
