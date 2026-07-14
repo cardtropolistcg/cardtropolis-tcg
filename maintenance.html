@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="canonical" href="https:https://cardtropolistcg.com/">
-  <meta property="og:url" content="https://cardtropolistcg.com/.">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cardtropolis TCG — Back Soon</title>
@@ -58,14 +56,18 @@
   </main>
   <script>
     (function () {
-      // Middleware bounces a wrong password back here with ?e=1
       if (new URLSearchParams(location.search).get('e') === '1') {
         document.getElementById('err').textContent = 'Incorrect password — try again.';
       }
       function unlock() {
         var v = document.getElementById('pw').value;
-        // Send to the server; Vercel Edge Middleware validates it and sets the unlock cookie.
         location.href = '/?pw=' + encodeURIComponent(v);
       }
       document.getElementById('go').addEventListener('click', unlock);
-      document.getElementById('pw').addEv
+      document.getElementById('pw').addEventListener('keydown', function (e) { if (e.key === 'Enter') unlock(); });
+    })();
+  </script>
+  <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
