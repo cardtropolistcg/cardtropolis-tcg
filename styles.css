@@ -268,7 +268,7 @@ section { padding: 60px 0; }
 
 /* Hours table */
 .hours-table { width: 100%; border-collapse: collapse; margin-top: 6px; }
-.hours-table td { padding: 8px 4px; border-bottom: 2px dotted rgba(19,27,48,0.2); font-size: 0.95rem; }
+.hours-table td { padding: 8px 4px; border-bottom: 2px dotted rgba(19,27,48,0.2); font-size: 0.95rem; color: var(--ink); }
 .hours-table td:last-child { text-align: right; font-weight: 800; font-variant-numeric: tabular-nums; }
 
 /* Weekly schedule */
