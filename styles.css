@@ -271,6 +271,11 @@ section { padding: 60px 0; }
 .hours-table td { padding: 8px 4px; border-bottom: 2px dotted rgba(19,27,48,0.2); font-size: 0.95rem; color: var(--ink); }
 .hours-table td:last-child { text-align: right; font-weight: 800; font-variant-numeric: tabular-nums; }
 
+/* Alert banner (temporary store notices) */
+.alert-banner { background: var(--red); color: var(--white); text-align: center; font-weight: 800;
+  padding: 11px 18px; font-size: 0.98rem; line-height: 1.45; border-bottom: 3px solid var(--yellow); }
+.alert-banner strong { color: var(--yellow); }
+
 /* Weekly schedule */
 .schedule-grid { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-bottom: 10px; }
 .day-card {
